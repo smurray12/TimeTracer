@@ -1,0 +1,192 @@
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.image{
+    background: #ecf0f1;
+    background-image: url('../media/time.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,47,75,0.5) 0%,rgba(72,160,37, 0.7) 100%), url('../media/time.jpg');
+    height: 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body, html {
+  height: 100%;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+footer{
+	font-size: small;
+	clear: both;
+    border: 1px groove #aaaaaa;
+    color: White;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+	background-color: #4CAF50;
+}
+
+.logo, a {
+  color: black;
+  font-family: sans-serif;
+  float: left;
+  padding: 0;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #4CAF50;
+}
+
+.headContainer {
+  font-family: sans-serif;
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: #ecf0f1; 
+}
+
+p, h2 {  
+  margin: 20px;
+  color: white;
+}
+
+h2 {
+  padding-top: 20px;
+}
+
+header::after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+nav li {
+  float: left;
+  margin-left: 20px;
+  padding: 15px;
+}
+
+nav a {
+  color: #4CAF50;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: black;
+}
+
+#main_body {
+  margin: 5px auto;
+}
+
+#login_container {
+  width: 450px;
+  margin: 0 auto;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  background: #ecf0f1;
+}
+
+#login {
+  text-align: center;
+  color: black;
+  font-size: large;
+  font-weight: 200;
+}
+
+.inputRow {
+  padding: 10px;
+  margin: auto;
+  width: 300px;
+}
+
+table.courses {
+  border: 6px solid #94908F;
+  background-color: #CDCBFF;
+  width: 100%;
+  text-align: center;
+}
+table.courses td, table.courses th {
+  border: 1px solid #948473;
+  padding: 4px 4px;
+}
+table.courses tbody td {
+  font-size: 13px;
+}
+table.courses thead {
+  background: #0D2263;
+  background: -moz-linear-gradient(top, #49598a 0%, #253872 66%, #0D2263 100%);
+  background: -webkit-linear-gradient(top, #49598a 0%, #253872 66%, #0D2263 100%);
+  background: linear-gradient(to bottom, #49598a 0%, #253872 66%, #0D2263 100%);
+}
+table.courses thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #A5E5D5;
+  text-align: center;
+  border-left: 2px solid #948473;
+}
+table.courses thead th:first-child {
+  border-left: none;
+}
+
+

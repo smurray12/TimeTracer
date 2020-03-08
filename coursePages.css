@@ -1,0 +1,109 @@
+/*note*/
+
+.note {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
+
+/*tables*/
+
+table.courses {
+  border: 6px solid #94908F;
+  background-color: #CDCBFF;
+  width: 100%;
+  text-align: center;
+}
+table.courses td, table.courses th {
+  border: 1px solid #948473;
+  padding: 4px 4px;
+}
+table.courses tbody td {
+  font-size: 13px;
+}
+table.courses thead {
+  background: #0D2263;
+  background: -moz-linear-gradient(top, #49598a 0%, #253872 66%, #0D2263 100%);
+  background: -webkit-linear-gradient(top, #49598a 0%, #253872 66%, #0D2263 100%);
+  background: linear-gradient(to bottom, #49598a 0%, #253872 66%, #0D2263 100%);
+}
+table.courses thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #A5E5D5;
+  text-align: center;
+  border-left: 2px solid #948473;
+}
+table.courses thead th:first-child {
+  border-left: none;
+}
+
+
+/* navigation */
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* Background*/
+body{
+	background-image: url("time.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*Heading*/
+
+.heading{
+	text-align: center;
+	color: white;
+}
+
+/*footer*/
+
+footer{
+	font-size: small;
+	clear: both;
+    border: 1px groove #aaaaaa;
+    color: White;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+	background-color: #4CAF50;
+}
+

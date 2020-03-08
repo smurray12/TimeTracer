@@ -11,7 +11,7 @@
 				<h1 class="logo">Time Tracer</h1>
 			</div>
 		</header>
-		
+		  <button class="dropbtn" onclick="document.location = 'page1.html'">Home</button>
 		<div class="dropdown">
 		  <button class="dropbtn">Courses</button>
 		  <div class="dropdown-content">
@@ -27,11 +27,22 @@
 	<br>
 	<br>
 	<p><strong>NOTE:</strong> Creating course will add the course to the list of course in the dropdown.</p>
-	<label>ADD Course</label>
-	<input type="text">
-	<button value="Create">Create</button>
+        <div id="container">
+            <br>
+	<label>Select Course</label>
+            <select id="course">
+  <option value="Courses">Courses</option>
+  <option value="csci311">csci311</option>
+  <option value="csci375">csci375</option>
+  <option value="csci375">csci331</option>
+</select><br><br>
+            <label>Add Course:</label>
+  <input type="text" id="Add" name="Add">
+            <button onclick="myFunction();">Create</button><br><br>
+            <label>Add Objective:</label>
+  <input type="text" id="Objective" name="Objective">
+            <button>Create</button>
 	<br> 
-	<br>
 	<br>
 	<br>
 		<div>Seconds: <span id="time">0</span></div> <br>
@@ -64,9 +75,17 @@
 					timeElapsed = -1;
 					tick()
 				}
+function myFunction() {
+  var x = document.getElementById("course");
+  var option = document.createElement("option");
+  option.text =document.getElementById("Add").value;
+  x.add(option,x[1]);
+}
 			</script>
 			<br>
 			<br>
+        </div>
+    </div>
 <footer>&copy; Copyright Feb 2020 SCUBE </footer>
 </body>
 </html>

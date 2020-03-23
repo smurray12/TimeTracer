@@ -115,7 +115,7 @@
 
     try {
       $dbh = new PDO("mysql:host=$host; dbname=$database", $user, $password);
-      $stmt = $dbh->prepare("SELECT * FROM courses");
+      $stmt = $dbh->prepare("SELECT * FROM Courses");
       $stmt->execute();
 
       $courseLabels = [];
@@ -123,14 +123,14 @@
       while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
         $courseLabels[] = $course_id;
-        $courseTime[] = $time;
+        $courseTime[] = (double)$duration;
        // echo $course_id;
        // echo $description;
        // echo $time;
 
       }
       // Get total time spent based on description
-      $qry = $dbh->prepare("SELECT description, sec_to_time(SUM(time_to_sec(time))) timetotal
+      $qry = $dbh->prepare("SELECT description, sec_to_time(SUM(time_to_sec(duration))) timetotal
                             FROM courses
                             GROUP BY description");
       $qry->execute();
@@ -140,13 +140,13 @@
       while($row = $qry->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
         $taskType[] = $description;
-        $totalTime[] = (int)$timetotal; 
+        $totalTime[] = (double)$timetotal; 
         // echo $description; 
-        // echo $timetotal;
+         echo $timetotal;
       }
 
-     echo json_encode($taskType);
-     echo json_encode($totalTime);
+    // echo json_encode($taskType);
+    // echo json_encode($totalTime);
 
 
     } catch(PDOException $e) {
@@ -172,13 +172,7 @@
         labels: <?php echo json_encode($courseLabels); ?>,
         datasets:[{
           label:'Hours',
-          data:[
-            94,
-            18,
-            43,
-            60,
-            105,
-          ],
+          data: <?php print_r(json_encode($courseTime)); ?>,
          
           backgroundColor:[
             'rgba(255, 99, 132, 0.6)',
